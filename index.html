@@ -16,11 +16,16 @@
     <!--Estilo-->
     <link rel="stylesheet" href="./assets/css/global.css">
     <link rel="stylesheet" href="./assets/css/pokedex.css">
+    <link rel="stylesheet" href="./assets/css/info.css">
 </head>
 <body>
 
 <section class="content">
     <h1>Pokedex</h1>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Digite nome de um Pokémon">
+    </div>
 
     <ol id="pokemonList" class="pokemons">
        <!-- Pokemons -->
@@ -34,7 +39,43 @@
     </div>
 
 </section>
-   
+
+<!--Janela Modal-->
+<div class="janela-modal" id="janela-modal">
+    <div class="modal pokemonList">
+        <button class="fechar" id="fechar">X</button>
+        <div class="pokemon" id="capa">
+            <h1 class="name-info"></h1>
+            <p class="number-info"></p>
+            <div class="detail-info">
+                <ol class="types-info">
+                    <!-- Tipos dinâmicos aqui -->
+                </ol>
+                <img src="">
+            </div>
+        </div>
+        
+        <div class="escolha">
+            <ul>
+                <li><a href="#" data-section="about">about</a></li>
+                <li><a href="#" data-section="stats">Base Stats</a></li>
+            </ul>
+        </div>
+
+        <div id="about" class="info-section">
+            <p></p>
+            <p></p>
+        </div>
+        
+        <div id="stats" class="info-section" style="display: none;">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        
+    </div>
+</div>
 <!--JS-->
 <script src="./assets/js/pokemon-model.js"></script>
 <script src="./assets/js/poke-api.js"></script>
